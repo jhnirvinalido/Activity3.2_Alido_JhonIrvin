@@ -164,3 +164,8 @@ ALTER TABLE Item
 
     DELETE FROM HeroItem
     WHERE hero_id = 1;
+
+    ELECT Player.player_name, Hero.hero_name
+    FROM Player
+    INNER JOIN Hero ON Player.hero_id = Hero.hero_id
+    WHERE Hero.is_active = true;
