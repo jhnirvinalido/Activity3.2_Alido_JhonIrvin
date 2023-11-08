@@ -169,3 +169,8 @@ ALTER TABLE Item
     FROM Player
     INNER JOIN Hero ON Player.hero_id = Hero.hero_id
     WHERE Hero.is_active = true;
+
+    SELECT Hero.hero_name, Class.class_name
+    FROM Hero
+    INNER JOIN Class ON Hero.class_id = Class.class_id
+    WHERE Class.class_name = 'Archers';
